@@ -3,7 +3,7 @@ Feature: Sign Up
     Given User is on HomePage
     When User navigates to RegistrationPage
 
-  @Registration @Birsen
+  @Registration   @Birsen
     Scenario Outline: Create a new user account following registration process
       When User enters <email> into email box on the registration page
       And User enters <firstname> into firstname box on the registration page
@@ -24,9 +24,11 @@ Feature: Sign Up
       Then User verifiyes the success registration
 
       Examples:
-      |email                      |firstname|lastname |password   |confirmPassword|phoneNumber|address           |city   |state  |zipCode|country                 |
+      |email             |firstname|lastname |password   |confirmPassword|phoneNumber|address           |city   |state  |zipCode|country                 |
       |rhsneoyt@gmail.com|birsen   | yildirim|B5058yldrm.|B5058yldrm.    |1234567890 |123 Lincoln Street|Atlanta|Georgia|12345  |Unated States of America|
 #Please change the email address for every test run
+
+
 
 
 

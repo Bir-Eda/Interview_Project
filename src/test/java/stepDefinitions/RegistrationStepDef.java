@@ -7,9 +7,10 @@ import pages.HomePage;
 import pages.RegistrationPage;
 import utils.Constants;
 
-public class RegistrationStepDefs {
+public class RegistrationStepDef {
     HomePage hp = new HomePage();
     RegistrationPage rp = new RegistrationPage();
+
     @Given("^User is on HomePage$")
     public void onHomepage() {
         Assert.assertEquals(BasePage.get().getTitle(), Constants.HOME_PAGE_TITLE);
@@ -30,6 +31,7 @@ public class RegistrationStepDefs {
                 break;
             case "firstname":
                 rp.sendFirstName(text);
+                break;
             case "lastname":
                 rp.sendLastName(text);
                 break;
